@@ -1,0 +1,14 @@
+{
+  "appName": "OffConvert",
+  "convert": "Donustur",
+  "queue": "Kuyruk",
+  "presets": "Hazir Ayarlar",
+  "history": "Gecmis",
+  "settings": "Ayarlar",
+  "dropFiles": "Gorsel, video veya ses dosyalarini buraya birakin",
+  "selectFiles": "Dosya sec",
+  "targetFormat": "Hedef format",
+  "preset": "Hazir ayar",
+  "convertNow": "Donustur",
+  "emptyQueue": "Henuz is yok"
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "presets": [
+    {
+      "id": "image-balanced",
+      "name": "Balanced",
+      "category": "image",
+      "targetFormat": "webp",
+      "settings": {
+        "quality": 82,
+        "stripMetadata": false,
+        "preserveAspectRatio": true
+      }
+    },
+    {
+      "id": "image-lossless",
+      "name": "Lossless",
+      "category": "image",
+      "targetFormat": "png",
+      "settings": {
+        "lossless": true,
+        "stripMetadata": false
+      }
+    }
+  ]
+}

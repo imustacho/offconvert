@@ -1,0 +1,19 @@
+{
+  "ffmpeg": {
+    "version": "",
+    "license": "",
+    "sourceUrl": "",
+    "buildConfiguration": ""
+  },
+  "ffprobe": {
+    "version": "",
+    "license": "",
+    "sourceUrl": "",
+    "buildConfiguration": ""
+  },
+  "imagemagick": {
+    "version": "",
+    "license": "",
+    "sourceUrl": ""
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "offconvert",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/desktop"
+  ],
+  "scripts": {
+    "dev": "npm --workspace @offconvert/desktop run dev",
+    "build": "npm --workspace @offconvert/desktop run build",
+    "lint": "npm --workspace @offconvert/desktop run lint",
+    "test": "npm --workspace @offconvert/desktop run test",
+    "typecheck": "npm --workspace @offconvert/desktop run typecheck",
+    "check": "npm run typecheck && npm run lint && npm run test && npm run build",
+    "tauri:dev": "npm --workspace @offconvert/desktop run tauri dev",
+    "tauri:build": "npm --workspace @offconvert/desktop run tauri build"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

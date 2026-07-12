@@ -1,0 +1,26 @@
+[package]
+name = "offconvert-desktop"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "offconvert_desktop_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.0.0", features = [] }
+
+[dependencies]
+offconvert-core = { path = "../../../crates/converter-core" }
+offconvert-engines = { path = "../../../crates/converter-engines" }
+offconvert-models = { path = "../../../crates/converter-models" }
+serde.workspace = true
+serde_json.workspace = true
+tauri = { version = "2.0.0", features = [] }
+tauri-plugin-dialog = "2.0.0"
+tauri-plugin-fs = "2.0.0"
+tauri-plugin-notification = "2.0.0"
+tauri-plugin-opener = "2.0.0"
+tauri-plugin-shell = "2.0.0"
+tokio.workspace = true

@@ -1,0 +1,14 @@
+[package]
+name = "offconvert-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+offconvert-core = { path = "../converter-core" }
+offconvert-engines = { path = "../converter-engines" }
+offconvert-models = { path = "../converter-models" }
+serde_json.workspace = true
+shell-integration = { path = "../shell-integration" }

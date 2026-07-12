@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "presets": [
+    {
+      "id": "audio-voice",
+      "name": "Voice",
+      "category": "audio",
+      "targetFormat": "mp3",
+      "settings": {
+        "audioCodec": "libmp3lame",
+        "bitrate": "96k",
+        "channels": 1
+      }
+    },
+    {
+      "id": "audio-high-quality",
+      "name": "High Quality",
+      "category": "audio",
+      "targetFormat": "flac",
+      "settings": {
+        "audioCodec": "flac"
+      }
+    }
+  ]
+}

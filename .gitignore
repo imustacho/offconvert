@@ -1,0 +1,14 @@
+node_modules/
+dist/
+target/
+.tauri/
+*.log
+*.tmp
+*.offconvert-temp
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+apps/desktop/src-tauri/gen/
+apps/desktop/src-tauri/target/

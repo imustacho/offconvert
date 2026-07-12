@@ -1,0 +1,14 @@
+{
+  "appName": "OffConvert",
+  "convert": "Convert",
+  "queue": "Queue",
+  "presets": "Presets",
+  "history": "History",
+  "settings": "Settings",
+  "dropFiles": "Drop image, video, or audio files here",
+  "selectFiles": "Select files",
+  "targetFormat": "Target format",
+  "preset": "Preset",
+  "convertNow": "Convert now",
+  "emptyQueue": "No jobs yet"
+}
