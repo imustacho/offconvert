@@ -39,7 +39,7 @@ jobs:
             args: --target x86_64-apple-darwin
     runs-on: ${{ matrix.platform }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Install Linux dependencies
         if: matrix.platform == 'ubuntu-22.04'
@@ -47,7 +47,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: npm
@@ -65,7 +65,12 @@ jobs:
         with:
           tagName: ${{ github.event.inputs.tag || github.ref_name }}
           releaseName: OffConvert ${{ github.event.inputs.tag || github.ref_name }}
-          releaseBody: Install OffConvert using the package for your operating system and architecture. This is an early development release.
+          releaseBody: |
+            Install OffConvert using the package for your operating system and architecture.
+
+            This is an early development preview. The interface, format registry, queue, presets, and conversion planning are available, but conversion engine execution is not complete and FFmpeg/ImageMagick binaries are not bundled yet.
+
+            Linux builds currently inherit a medium-severity glib 0.18 advisory through Tauri's GTK dependency chain. Avoid processing untrusted inputs on Linux until the upstream dependency is updated.
           releaseDraft: false
           prerelease: false
           args: ${{ matrix.args }}
