@@ -40,7 +40,7 @@ Create a distributable installer with:
 npm run tauri:build
 ```
 
-Installers are written below `apps/desktop/src-tauri/target/release/bundle/`.
+Installers are written below `target/release/bundle/`.
 
 ## Notes
 

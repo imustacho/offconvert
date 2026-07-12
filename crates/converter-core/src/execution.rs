@@ -4,7 +4,7 @@ use crate::paths::{resolve_output_collision, temp_output_path};
 use crate::requests::validate_request;
 use offconvert_engines::EngineSet;
 use offconvert_models::{ConversionPlan, ConversionRequest, MediaCategory};
-use std::path::{Path, PathBuf};
+use std::path::Path;
 
 pub fn build_plan(
     request: &ConversionRequest,
@@ -21,7 +21,7 @@ pub fn build_plan(
                 .output_directory
                 .clone()
                 .or_else(|| input.parent().map(Path::to_path_buf))
-                .ok_or_else(|| CoreError::InvalidOutput)?;
+                .ok_or(CoreError::InvalidOutput)?;
 
             let final_output = output_dir.join(output_name_for(input, &request.target_format));
             let final_output = resolve_output_collision(&final_output, &request.overwrite_policy)?;
