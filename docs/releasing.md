@@ -1,8 +1,7 @@
 # Releasing OffConvert
 
-Releases are built by GitHub Actions from version tags. The workflow creates a
-draft GitHub Release so artifacts and release notes can be checked before they
-become public.
+Releases are built by GitHub Actions from version tags. The workflow publishes
+the GitHub Release after all platform artifacts are uploaded.
 
 ## Prepare a release
 
@@ -21,9 +20,10 @@ git tag -a vX.Y.Z -m "OffConvert vX.Y.Z"
 git push origin vX.Y.Z
 ```
 
-The `Release` workflow builds Windows, macOS, and Linux packages. Open the draft
-release, verify its notes and artifacts, then publish it. If any platform fails,
-fix the cause and create a new patch version instead of moving a published tag.
+The `Release` workflow builds Windows, Linux, Apple Silicon macOS, and Intel
+macOS packages. Verify the published notes and artifacts when all matrix jobs
+finish. If any platform fails, fix the cause and create a new patch version
+instead of moving a published tag.
 
 ## Engine licensing
 
