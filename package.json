@@ -1,7 +1,7 @@
 {
   "name": "offconvert",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "workspaces": [
     "apps/desktop"
   ],
@@ -12,6 +12,7 @@
     "test": "npm --workspace @offconvert/desktop run test",
     "typecheck": "npm --workspace @offconvert/desktop run typecheck",
     "check": "npm run typecheck && npm run lint && npm run test && npm run build",
+    "prepare:engines": "npm --workspace @offconvert/desktop run prepare:engines",
     "tauri:dev": "npm --workspace @offconvert/desktop run tauri dev",
     "tauri:build": "npm --workspace @offconvert/desktop run tauri build"
   },

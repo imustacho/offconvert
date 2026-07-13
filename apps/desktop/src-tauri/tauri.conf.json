@@ -1,13 +1,13 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "OffConvert",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "identifier": "io.github.imustacho.offconvert",
   "build": {
     "frontendDist": "../dist",
     "devUrl": "http://localhost:1420",
     "beforeDevCommand": "npm run dev",
-    "beforeBuildCommand": "npm run build"
+    "beforeBuildCommand": "npm run prepare:engines && npm run build"
   },
   "app": {
     "windows": [
