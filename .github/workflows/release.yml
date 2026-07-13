@@ -68,7 +68,7 @@ jobs:
           releaseBody: |
             Install OffConvert using the package for your operating system and architecture.
 
-            This is an early development preview. The interface, format registry, queue, presets, and conversion planning are available, but conversion engine execution is not complete and FFmpeg/ImageMagick binaries are not bundled yet.
+            This is an early development preview. Core image, video, and audio conversions work through the bundled FFmpeg engine. Advanced presets, history, and cancellation are not complete yet.
 
             Linux builds currently inherit a medium-severity glib 0.18 advisory through Tauri's GTK dependency chain. Avoid processing untrusted inputs on Linux until the upstream dependency is updated.
           releaseDraft: false

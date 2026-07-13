@@ -4,11 +4,14 @@ OffConvert is MIT-licensed, but bundled binaries keep their own licenses.
 
 ## FFmpeg
 
-- Version: TBD by local packaging pipeline
-- License: Must match selected build artifacts
-- Source: https://ffmpeg.org/
-- Notes: Avoid packaging GPL-only builds unless the repository is intentionally
-  relicensed and documentation is updated.
+- Version: 6.1.1
+- Binary distributor: https://github.com/eugeneware/ffmpeg-static
+- Upstream source: https://ffmpeg.org/download.html
+- License: The bundled builds may enable GPL components and are distributed
+  under GPL-3.0-or-later. The exact binary license text is included alongside
+  the downloaded artifact by `ffmpeg-static`.
+- Relationship: FFmpeg is executed as a separate command-line program and is
+  not linked into OffConvert.
 
 ## ImageMagick
 

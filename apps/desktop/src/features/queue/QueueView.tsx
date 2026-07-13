@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { revealItemInDir } from "@tauri-apps/plugin-opener";
 import { useAppStore } from "../../lib/store";
 
 export function QueueView() {
@@ -6,7 +7,7 @@ export function QueueView() {
   const jobs = useAppStore((state) => state.jobs);
 
   return (
-    <section className="rounded-2xl bg-white p-4 shadow-sm">
+    <section className="rounded-2xl bg-white p-4 shadow-sm" id="queue">
       <h2 className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">{t("queue")}</h2>
       {jobs.length === 0 ? (
         <p className="text-sm text-slate-500">{t("emptyQueue")}</p>
@@ -21,6 +22,16 @@ export function QueueView() {
               <div className="mt-2 h-2 overflow-hidden rounded-full bg-slate-200">
                 <div className="h-full bg-accent" style={{ width: `${job.progress}%` }} />
               </div>
+              {job.currentStep && <p className="mt-2 break-words text-xs text-slate-500">{job.currentStep}</p>}
+              {job.outputPath && (
+                <button
+                  className="mt-2 text-xs font-medium text-accent hover:underline"
+                  onClick={() => void revealItemInDir(job.outputPath!)}
+                  type="button"
+                >
+                  {t("showOutput")}
+                </button>
+              )}
             </div>
           ))}
         </div>
@@ -28,4 +39,3 @@ export function QueueView() {
     </section>
   );
 }
-

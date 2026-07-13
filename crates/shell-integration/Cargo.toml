@@ -7,3 +7,5 @@ license.workspace = true
 [dependencies]
 thiserror.workspace = true
 
+[target.'cfg(windows)'.dependencies]
+winreg = "0.55"

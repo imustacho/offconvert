@@ -17,7 +17,12 @@ export const useAppStore = create<AppState>((set) => ({
   files: [],
   jobs: [],
   targetFormat: "jpg",
-  addFiles: (files) => set((state) => ({ files: [...state.files, ...files] })),
+  addFiles: (files) =>
+    set((state) => ({
+      files: [...state.files, ...files].filter(
+        (file, index, all) => all.findIndex((candidate) => candidate.path === file.path) === index,
+      ),
+    })),
   setTargetFormat: (targetFormat) => set({ targetFormat }),
   setPresetId: (presetId) => set({ presetId }),
   addJobs: (jobs) => set((state) => ({ jobs: [...jobs, ...state.jobs] })),
@@ -26,4 +31,3 @@ export const useAppStore = create<AppState>((set) => ({
       jobs: state.jobs.map((item) => (item.id === job.id ? job : item)),
     })),
 }));
-

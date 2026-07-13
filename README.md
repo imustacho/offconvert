@@ -9,9 +9,9 @@ uses Tauri 2, React, TypeScript, and Rust, with a reusable core shared by the
 desktop application, CLI, and operating-system integrations.
 
 > [!IMPORTANT]
-> OffConvert is currently an early development release. The interface, format
-> registry, queue, presets, and conversion planning exist; actual engine process
-> execution and some platform integrations are still being implemented.
+> OffConvert is currently an early development release. Core image, video, and
+> audio conversions work through bundled FFmpeg, but advanced presets, history,
+> cancellation, and some platform integrations are still being implemented.
 
 ## Features
 
