@@ -6,6 +6,13 @@ All notable changes to OffConvert are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.3] - 2026-07-13
+
+### Fixed
+
+- Allow the main window to open the native file picker and reveal converted files.
+- Remove the unused sidebar and expand the converter workspace.
+
 ## [0.1.2] - 2026-07-13
 
 ### Fixed
@@ -31,7 +38,8 @@ All notable changes to OffConvert are documented here. The format follows
 - Desktop shell and reusable command-line interface.
 - Cross-platform CI and GitHub Release automation.
 
-[Unreleased]: https://github.com/imustacho/offconvert/compare/v0.1.2...HEAD
+[Unreleased]: https://github.com/imustacho/offconvert/compare/v0.1.3...HEAD
+[0.1.3]: https://github.com/imustacho/offconvert/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/imustacho/offconvert/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/imustacho/offconvert/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/imustacho/offconvert/releases/tag/v0.1.0

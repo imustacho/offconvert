@@ -149,7 +149,7 @@ export function ConvertView() {
   }
 
   return (
-    <section className="flex flex-1 flex-col gap-6 p-6" id="convert">
+    <section className="flex min-w-0 flex-1 flex-col gap-6" id="convert">
       <div className="rounded-3xl border-2 border-dashed border-slate-300 bg-white p-10 text-center">
         <p className="text-lg font-medium text-ink">{t("dropFiles")}</p>
         <button
